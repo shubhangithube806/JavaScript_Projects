@@ -215,5 +215,98 @@ function f3_assignment() {
      alert (msg);
 }
     
-    
+  
+
+function f4_DataType() {
+
+     //Data Type
+     //JavaScript has 8 Datatypes
+     //1.String     //5.Undefined
+     //2.Number     //6.Null
+     //3.Bigint     //7.Symbol
+     //4.Boolean    //8.Object (The object can contain a.An object b.An array c.A date) 
+
+     //1.String
+     //When adding a number and a string, JavaScript will treat the number as a string.
+     var msg = "";
+
+     let name = "Shubhangi" + " Gunjal";
+     
+     msg = `\n name = "Shubhangi" + " Gunjal" --> ${name}`;
+
+
+     //JavaScript evaluates expressions from left to right.
+     //JavaScript treats 15 and 4 as numbers, until it reaches "Shubh".
+     let num1 =  15 + 4 + "Shubh";
+
+     msg += `\n num1 =  15 + 4 + "Shubh"  --> ${num1}`;
+
+     //the first operand is a string, all operands are treated as strings.
+     let num2 = "Shubh" + 15 + 4;
+
+     msg += `\n num2 = "Shubh" + 15 + 4  --> ${num2}`;
+
+
+     //2.Number
+     //All JavaScript numbers are stored as decimal numbers (floating point).
+
+     let x = 3.14;
+     let y = 10;
+     let a = x + y;
+
+     msg += `\n  a = x + y   --> ${a}`;
+
+
+     //3.Bigint 
+     //JavaScript BigInt is a new datatype (ES2020) that can be used to store integer values that are too big to be 
+     //represented by a normal JavaScript Number.
+
+     let b = BigInt("123344465890754211467097");
+
+     msg += `\n  b = BigInt("123344465890754211467097")  --> ${b}`;
+
+     //4.Booleans
+     //Booleans can only have two values: true or false.
+
+     let x1 = 7;
+     let x2 = 7;
+     let x3 = 8;
+
+    msg += `\n  (x1 == x2) and (x1 == x3)  --> ${(x1 == x2) + " " + (x1 == x3)}`;
+
+     //5.Undefined
+     //In JavaScript, a variable without a value, has the value undefined. The type is also undefined.
+
+     let bike;
+
+     msg += `\n without a value  --> ${bike}`;
+
+     //6. Object 
+     //JavaScript objects are written with curly braces {}.
+     //Object properties are written as name:value pairs, separated by commas.
+
+     //a. An object
+
+     const person = {
+          firstName : "Pravin", 
+          lastName : "Gunjal",
+          age : 25,
+          bodyWeight : 65
+     };
+
+     msg += `\n An object   --> ${person.firstName + " is " + person.age + " years old."}`;
+
+     //b. An array
+     //JavaScript arrays are written with square brackets.
+     //Array items are separated by commas.
+     //The following code declares (creates) an array called cars, containing three items (car names):
+
+     const car = ["Nexon" , "Creata" , "BMW"];
+
+     msg += `\n An array  --> ${car[0]}`
+
+     alert (msg);
+
+
+}
 
