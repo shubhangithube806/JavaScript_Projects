@@ -303,10 +303,66 @@ function f4_DataType() {
 
      const car = ["Nexon" , "Creata" , "BMW"];
 
-     msg += `\n An array  --> ${car[0]}`
+     msg += `\n An array  --> ${car[0]}`;
+
+    
+
+     //c. A Date
+
+     const date = new Date("2023-04-15");
+
+     msg += `\n date = new Date("2023-04-15")  --> ${date}`;
 
      alert (msg);
-
-
 }
+
+function f5_function() {
+
+     //A JavaScript function is a block of code design to perform a particular task.
+     //A JavaScript function is exicuted when "something" calls it. 
+     //A JavaScript function is defined with the function keyword, followed by a name, followed by parentheses ().
+
+     //Function names can contain letters, digits, underscores, and dollar signs (same rules as variables).
+
+     //The parentheses may include parameter names separated by commas:
+     //(parameter1, parameter2, ...)
+
+     var msg = "";
+
+     let result = myFunction(4 ,3);
+
+     function myFunction(p1,p2) {
+          return p1 * p2;
+     }
+
+     msg = `result = myFunction(4 ,3)  --> ${result}`;
+
+     function toCelsius(f) {
+          return (5/9) * (f-32);
+     }
+
+     let value = toCelsius(77);
+
+     msg += `\n value = toCelsius(77)  -->${value}`;
+
+     alert (msg);
+}
+
+
+function f6_object() {
+     //Objects are variables too. But objects can contain many values.
+     //It is a common practice to declare objects with the const keyword.
+     var msg = "";
+
+     const flower = {
+          name: "rose", 
+          color: "red", 
+          botanicalName: "rosa cynansis"
+     };
+
+     msg = `An Object  --> ${"The botanical name of " + flower.name + " is " + flower.botanicalName}`;
+
+     alert(msg);
+}
+
 
