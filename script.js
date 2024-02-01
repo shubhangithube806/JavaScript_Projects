@@ -1,6 +1,6 @@
 
 
-function f1_variables() {
+function f1_Variables() {
 
     //Variables :
     //Variables are container for storing data
@@ -74,7 +74,7 @@ function f1_variables() {
 }
 
 
-function f2_operators() {
+function f2_Operators() {
      //There are different types of JavaScript operators:
     //1.Arithmetic Operators
     //2.Assignment Operators
@@ -158,7 +158,8 @@ function f2_operators() {
 
 }
 
-function f3_assignment() {
+
+function f3_Assignment() {
 
      //2.Assignment operator
      //Assignment operators assign values to JavaScript variables.
@@ -213,8 +214,7 @@ function f3_assignment() {
      msg += `\n remind %= 5  -->${remind}`;
 
      alert (msg);
-}
-    
+}   
   
 
 function f4_DataType() {
@@ -316,7 +316,8 @@ function f4_DataType() {
      alert (msg);
 }
 
-function f5_function() {
+
+function f5_Function() {
 
      //A JavaScript function is a block of code design to perform a particular task.
      //A JavaScript function is exicuted when "something" calls it. 
@@ -349,7 +350,7 @@ function f5_function() {
 }
 
 
-function f6_object() {
+function f6_Object() {
      //Objects are variables too. But objects can contain many values.
      //It is a common practice to declare objects with the const keyword.
      var msg = "";
