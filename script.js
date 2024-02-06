@@ -353,7 +353,7 @@ function f5_Function() {
 function f6_Object() {
      //Objects are variables too. But objects can contain many values.
      //It is a common practice to declare objects with the const keyword.
-     var msg = "";
+     
 
      const flower = {
           name: "rose", 
@@ -361,9 +361,172 @@ function f6_Object() {
           botanicalName: "rosa cynansis"
      };
 
-     msg = `An Object  --> ${"The botanical name of " + flower.name + " is " + flower.botanicalName}`;
+     alert(`An Object  --> ${"The botanical name of " + flower.name + " is " + flower.botanicalName}`);
 
+     
+}
+
+
+function f7_Events() {
+
+     //Events
+     //HTML events are "things" that happen to HTML elements.
+     //An HTML event can be something the browser does, or something a user does.
+     //Here are some examples of HTML events:
+     //An HTML web page has finished loading
+     //An HTML input field was changed
+     //An HTML button was clicked
+     //Here are some common HTML events:
+     //onchange, onclick, onmouseover, onmouseout, onkeydown, onload
+
+     function displayDate() {
+          return Date();
+     }
+
+     alert(`Todays Date : ${displayDate()}`);
+}
+
+
+function f8_Strings1() {
+
+     //strings:
+     //Strings are for storing text
+
+     
+     let text = "This is the javaScript string method.";
+     
+     let msg = `Original String : ${text}\n`
+     
+        + `Length of String  : ${text.length}\n\n`          // The length property returns the length of a string.
+
+
+        //Extracting String Characters
+        //There are 4 methods for extracting string characters:
+        //at(position), charAt(position), charCodeAt, Using property access [] like in arrays
+
+        + `Extracting String Characters : \n`
+          + `Using charAt() : ${text.charAt(0)}\n`            //The charAt() method returns the character at a specified index (position) in a string:
+          + `Using chartCodeAt() : ${text.charCodeAt(7)}\n`  //The charCodeAt() method returns the code of the character at a specified index in a string:The method returns a UTF-16 code (an integer between 0 and 65535).
+          + `Using at() : ${text.at(3)}\n`                      //The at() method returns an indexed element from a string:
+          + `Using Backed notation[ ] : ${text[8]}\n\n`           //The bracked notation [] returns an indexed element from a string:
+                                  
+
+        //Extracting String Parts
+        //There are 3 methods for extracting a part of a string:
+        //slice(start, end), substring(start, end), substr(start, length)
+
+        //substr() is similar to slice() but,
+        //The difference is that the second parameter specifies the length of the extracted part.
+
+        //JavaScript counts positions from zero.
+        //First position is 0.
+        //Second position is 1.
+
+        +`Extracting String Parts :\n`
+          +`1. slice(start, end):\n`
+               +`text.slice(12, 23) : ${text.slice(12, 23)}\n`          //slice out a portion of string from 12 to position 23:
+               +`text.slice(12) : ${(text.slice(12))}\n`                //If you omit the second parameter, the method will slice out the rest of the string:
+               +`text.slice(-14) : ${text.slice(-14)}\n`                //If a parameter is negative, the position is counted from the end of the string:
+               +`text.slice(-14, -8) : ${text.slice(-14, -8)}\n\n`      //This example slices out a portion of a string from position -14 to position -8:
+
+        +`2. substring(start, end)\n`                                    //substring() is similar to slice().
+               +`text.substring(24, 30): ${text.substring(23, 30)}\n\n` //The difference is that start and end values less than 0 are treated as 0 in substring().
+
+               +`3. substr(start, length)\n`                            //substr() is similar to slice().
+                    +`substr(5, 17) : ${text.substr(5, 17)}\n\n`        //The difference is that the second parameter specifies the length of the extracted part.
+     
+
+       +`Converting a String to an Array\n`                              //A string can be converted to an array with the split() method:
+          +`Using String split() : ${text.split(" ")}\n`                 //Split on spaces
+
+        alert(msg);
+}
+   
+
+function f8_Strings2() {
+
+     let text1 = "This is javaScript string method.";
+
+     let msg = `Converting to Upper and Lower Case :\n`
+     
+          +`text1.toUpperCase() :  ${text1.toUpperCase()}\n`          //A string is converted to upper case with toUpperCase():
+          +`text1.toLowerCase() : ${text1.toLowerCase()}\n\n`         //A string is converted to lower case with toLowerCase():
+     
+     +`JavaScript String concat() :\n`                                //text = "Hello" + " " + "World!"; text = "Hello".concat(" ", "World!"); these two lines do the same.
+          +`Using (+) operator : ${text1 + " Concatenation"}\n`
+          +`Using concat() : ${text1.concat(" ", "Concatenation")}\n\n`//concat() joins two or more strings:
+
+     +`JavaScript String trim :\n`
+          +`Using trim() : ${"   This is trim    ".trim()}\n`                           //The trim() method removes whitespace from both sides of a string:
+          +`Using trimStart() : ${"   This is trim    ".trimStart()}\n`
+          +`Using trimEnd() : ${"   This is trim    ".trimEnd()}\n\n`
+
+     +`JavaScript String Padding :\n`                                 //This method pads a string with another string (multiple times) until it reaches a given length.
+          +`Using padStart() : ${"5".padStart(4,"p")}\n`              //The padStart() method pads a string from the start.
+          +`Using  padEnd() : ${"5".padEnd(4, "p")}\n\n`              //To pad a number, convert the number to a string first.
+
+     +`JavaScript String repeat() :\n`                                //The repeat() method returns a string with a number of copies of a string.
+          +`Using repeat() : ${"Hello Shubhangi!".repeat(3)}\n`
+
+     +`Replacing String Content :\n`
+          +`Using replace() :` 
+               +`${"Please visit Shope".replace("Shope","House")}\n`   //The replace() method replaces a specified value with another value in a string:
+               +`for case insensitiveness : ${"Please visit Shope".replace(/SHOPE/i, "House")}\n` //To replace case insensitive, use a regular expression with an /i flag (insensitive):
+               +`To replace all matches : ${"Please visit Shope and Shope".replace(/Shope/g,"House")}\n`//To replace all matches, use a regular expression with a /g flag (global match):
+
+          +`Using replaceAll() : ${"Please visit Shope and Shope".replaceAll("Shope", "House")}\n` //The replaceAll() method allows you to specify a regular expression instead of a string to be replaced.
+
+     
+
+     
+
+
+
+     ;
+     alert (msg);
+}
+
+
+function f8_String_Search() {
+
+     var  text3 = "Please send me my pictures, 'please' send";
+
+     var msg =`Using indexof() : ${text3.indexOf("send")}\n`          //The indexOf() method returns the index (position) of the first occurrence of a string in a string, or it returns -1 if the string is not found:
+
+          +`indexof("send", 10) : ${text3.indexOf("send", 10)}\n`     //a second parameter as the starting position for the search:
+
+          +`Using lastIndexof() : ${text3.lastIndexOf("send")}\n`       //The lastIndexOf() method returns the index of the last occurrence of a specified text in a string:
+     
+          +`lastIndexOf("send", 15) : ${text3.lastIndexOf("send", 15)}\n`//a second parameter as the starting position for the search:
+
+          +`Using String search() : ${text3.search("please")}\n`             //The search() method searches a string for a string (or a regular expression) and returns the position of the match:
+
+          +`Using String match() : ${text3.match("send").length}, ${text3.match("send")}\n`                //The match() method returns an array containing the results of matching a string against a string (or a regular expression).
+          
+          +`Using String matchAll() :  ${Array.from(text3.matchAll("send")).length}, ${Array.from(text3.matchAll("send"))}\n`//The matchAll() method returns an iterator containing the results of matching a string against a string (or a regular expression).
+
+          +`Using String includes() : ${text3.includes("pictures")}\n`      //The includes() method returns true if a string contains a specified value.       
+          
+          +`Using String includes() : ${text3.includes("me",20)}\n`
+          
+          +`Using String startsWith() : ${text3.startsWith("Please")}\n`             //The startsWith() method returns true if a string begins with a specified value.
+          
+          +`Using String startWith() : ${text3.startsWith("send")}\n`                  //startsWith() is case sensitive.
+
+          +`Using String endWith() : ${text3.endsWith("send")}\n`                      //The endsWith() method returns true if a string ends with a specified value.
+          
+          +`Using String endWith() : ${text3.endsWith("send", 11)}`
+          ;
      alert(msg);
 }
+
+
+
+
+
+
+
+        
+     
 
 
