@@ -521,12 +521,86 @@ function f8_String_Search() {
 }
 
 
+function f9_Numbers() {
+
+     //JavaScript has only one type of number. Numbers can be written with or without decimals.
+     //let x = 3.14;   A number with decimal 
+     //let y = 5;      A number without decimal
+
+     //Extra large or extra small numbers can be written with scientific (exponent) notation:
+     // let x = 123e5  means 12300000
+     //let y = 123e-5  means 0.00123
+
+     var msg =`Adding Numbers and Strings :\n`              //Numbers are added. Strings are concatenated.
+          +`x = 10 + 20 : x = ${10 + 20}\n`                 //If you add two numbers, the result will be a number:
+          +`x = "10" + "20" : x = ${"10" + "20"}\n`         //If you add two strings, the result will be a string concatenation:
+          +`x = 10 + "20" : x = ${10 + "20"}\n`             //If you add a number and a string, the result will be a string concatenation:
+          +`x = "10" + 20 : x = ${"10" + 20}\n`             //If you add a string and a number, the result will be a string concatenation:
+          +`x = "result is:" + 10 + 20 : x = ${"The result is:" + 10 + 20}\n` 
+          +`x = 10 + 20 + "30" : x = ${10 + 20 + "30"}\n\n`
+
+          +`Numeric Strings :\n`                            //JavaScript will try to convert strings to numbers in all numeric operations(-, /, *, +):
+          +`y = "100" / "10" : y = ${"100" / "10"}\n`
+          +`y = "100" * "10" : y = ${"100" * "10"}\n`
+          +`y = "100" - "10" : y = ${"100" - "10"}\n`
+          +`y = "100" + "10" : y = ${"100" + "10"}\n`        //this will not work
+          +`NaN - Not a Number\n`                             //NaN is a JavaScript reserved word indicating that a number is not a legal number.
+          +`z = 100 / "Apple" : z = ${100 / "Apple"}\n`
+          +`z = 100 / "5" : z = ${100 / "5"}\n`
+          +`z = NaN + 5 : Z = ${NaN + 5}\n`
+          +`z = NaN + "5" : Z = ${NaN + "5"}\n`
+          + `typeof NaN : ${typeof NaN}\n\n`
+
+          +`Infinity : \n`                                  //Infinity (or -Infinity) is the value JavaScript will return if you calculate a number outside the largest possible number.
+          +`a = 2 / 0 : a = ${2 / 0}\n`                       //Division by zero generates Infinity;
+          +`a = -2 / 0 : a = ${-2 / 0}\n`
+          +`typeof Infinity : ${typeof Infinity}\n`
+     ;
+
+     alert(msg);
+}
+
+
+function f9_Other_Numbers() {
+
+     let myNumber = 40;
+
+     let msg = `Other type of numbers: \n`                  //By default, JavaScript displays numbers as base 10 decimals.
+          +`myNumber = 40\n`
+          +`Hexatrigesimal (base 36) myNumber.toString(36) : ${myNumber.toString(36)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Duotrigesimal (base 32) myNumber.toString(32) : ${myNumber.toString(32)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Hexadecimal (base 16) myNumber.toString(16) : ${myNumber.toString(16)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Duodecimal (base 12) myNumber.toString(12) : ${myNumber.toString(12)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Decimal (base 10) myNumber.toString(10) : ${myNumber.toString(10)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Octal (base 8) myNumber.toString(8) : ${myNumber.toString(8)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+          +`Binary (base 2) myNumber.toString(2) : ${myNumber.toString(2)}\n`                                               //But you can use the toString() method to output numbers from base 2 to base 36.
+
+     ;
+
+     alert(msg);
+}
+
+
+function f10_BigInt() {
+     //JavaScript BigInt variables are used to store big integer values that are too big to be represented by a normal JavaScript Number.
+     //JavaScript integers are only accurate up to 15 digits:
+     let msg = `Create a BigInt\n`
+          +`x = 9999999999999999 : ${x = 9999999999999999}\n` //more than 15 digit it round up value
+          +`x = 9999999999999999n : ${x = 9999999999999999n}\n`
+          +`x = BigInt("9999999999999999") : ${x = 9999999999999999n}\n\n`
+
+          +`Precision Curiosity\n`       //Rounding can compromise program security:
+          +`MAX_SAFE_INTEGER : ${Number.MAX_SAFE_INTEGER}\n`
+          +`MIN_SAFE_INTEGER : ${Number.MIN_SAFE_INTEGER}\n`
+          +`Number.isInteger() : ${Number.isInteger(10)} \t : ${Number.isInteger(10.5)}\n`  //The Number.isInteger() method returns true if the argument is an integer.
+          +`Number.isSafeInteger() : ${Number.isSafeInteger(10)} \t :${Number.isSafeInteger(123456789012345678)}`  //The Number.isSafeInteger() method returns true if the argument is a safe integer.
+     ;
+     alert(msg);
+}
 
 
 
 
-
-        
      
 
 
