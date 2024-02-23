@@ -599,6 +599,85 @@ function f10_BigInt() {
 }
 
 
+function f11_Number_Method_1() {
+    let msg = `toString() Method : \n`        //1.Returns a number as a string
+          +`x = 123 : x = ${(123).toString()}\n`
+          +`toExponential() Method: \n`      //A parameter defines the number of characters behind the decimal point:
+          +`9.564.toExponential() : ${(9.564).toExponential()}  
+            9.564.toExponential(2):${(9.564).toExponential(2)}
+            9.564.toExponential(5) : ${(9.564).toExponential(5)}\n`
+          +`toFixed() Method : \n`        //The toFixed() method rounds a number to a given number of digits.
+          +`9.564.toFixed(0) : ${(9.564).toFixed(0)}
+            9.564.toFixed(2) :${(9.564).toFixed(2)}
+            9.564.toFixed(6) :${9.564.toFixed(6)}\n`
+          +`toPrecision() method : \n`
+          +`9.564.toPrecision() : ${(9.564).toPrecision()}
+            9.564.toPrecision(2) :${(9.564).toPrecision(2)}
+            9.564.toPrecision(6) :${(9.564).toPrecision(6)}\n`
+          +`valueOf() Method\n`         //The valueOf() method returns a number as a number:
+          +`(125).valueOf() :${(125).valueOf()}
+            (125 + 5).valueOf() :${(125 + 5).valueOf()}\n`
+          +`Number Object Methods :\n`
+          +`Number.isInteger(10) : ${Number.isInteger(10)}\t`         //The Number.isInteger() method returns true if the argument is an integer.
+          +`Number.isInteger(10.5) : ${Number.isInteger(10.5)}\n`
+          +`Number.isSafeInteger(10) : ${Number.isSafeInteger(10)}\n` //The Number.isSafeInteger() method returns true if the argument is a safe integer.
+          +`Number.isSafeInteger(12345678901234567890) : ${Number.isSafeInteger(12345678901234567890)}`
+          +`Number.parseFloat("10") : ${Number.parseFloat("10")}`     //Number.parseFloat() parses a string and returns a number.
+          +`Number.parseFloat("10 years") : ${Number.parseFloat("10 years")}`     //Spaces are allowed. Only the first number is returned:
+          +`Number.parseInt(-10) : ${Number.parseInt(-10)}`          //Spaces are allowed. Only the first number is returned:
+          +`Number.parseInt("10 20 30") : ${Number.parseInt("10 20 30")}` //Number.parseInt() parses a string and returns a whole number.
+          ;     
+    alert(msg);
+}
+
+
+function f11_Number_Method_2() {
+    let msg =                          //Converting Variables to Numbers -- The methods below are not number methods. They are global JavaScript methods.
+    `1.The Number() Method: \n`       //The Number() method can be used to convert JavaScript variables to numbers:
+    +`Number(true) : ${Number(true)}\n`
+    +`Number(false) : ${Number(false)}\n`
+    +`Number("10") : ${Number("10")}\n`
+    +`Number(" 10") : ${Number(" 10")}\n`
+    +`Number("10 ") : ${Number("10 ")}\n`
+    +`Number(" 10 ") : ${Number(" 10 ")}\n`
+    +`Number("10.33") : ${Number("10.33")}\n`
+    +`Number"10,33") : ${Number("10,33")}\n`  //If the number cannot be converted, NaN (Not a Number) is returned.
+    +`Number("10 33") : ${Number("10 33")}\n`
+    +`Number("Pravin") : ${Number("Pravin")}\n`
+    +`The Number() Method Used on Dates\n`     //Number() can also convert a date to a number.
+    +`Number(new Date("1970-01-01")) : ${Number(new Date("1970-01-01"))})\n`
+    +`Number(new Date("1970-01-02")) : ${Number(new Date("1970-01-02"))})`      //The number of milliseconds between 1970-01-02 and 1970-01-01 is 86400000:
+     +`2.The parseInt() Method : \n`         //parseInt() parses a string and returns a whole number. Spaces are allowed. Only the first number is returned:
+     +`parseInt("-10") : ${parseInt("-10")} \n`
+     +`parseInt("-10.33") : ${parseInt("-10.33")} \n`
+     +`parseInt("10") : ${parseInt("10")} \n`
+     +`parseInt("10 20 30") : ${parseInt("10 20 30")} \n`
+     +`parseInt("10 years") : ${parseInt("10 years")} \n`
+     +`parseInt("years 10") : ${parseInt("years 10")} \n`
+     +`The parseFloat() Method : \n`         //parseFloat() parses a string and returns a number. Spaces are allowed. Only the first number is returned:
+     +`parseFloat("10") : ${parseFloat("10")}\n`
+     +`parseFloat("10.33") : ${parseFloat("10.33")}`
+     +`parseFloat("10 20 30") : ${parseFloat("10 20 30")}\n`
+     +`parseFloat("10 years") : ${parseFloat("10 years")}`
+     +`parseFloat("years 10") : ${parseFloat("years 10")}\n`
+    ;
+    alert(msg);
+}
+
+
+function f11_Number_Properties() {
+     let msg =`Number.EPSILON : ${Number.EPSILON}\n`        //Number.EPSILON is the difference between the smallest floating point number greater than 1 and 1.
+          +`Number.MAX_VALUE : ${Number.MAX_VALUE}\n`        //Number.MAX_VALUE is a constant representing the largest possible number in JavaScript.
+          +`Number.MIN_VALUE : ${Number.MIN_VALUE}\n`        //Number.MIN_VALUE is a constant representing the lowest possible number in JavaScript.
+          +`Number.MAX_SAFE_INTEGER : ${Number.MAX_SAFE_INTEGER}\n` //Number.MAX_SAFE_INTEGER represents the maximum safe integer in JavaScript.(2^53 - 1)
+          +`Number.MIN_SAFE_INTEGER : ${Number.MIN_SAFE_INTEGER}\n` //Number.MIN_SAFE_INTEGER represents the minimum safe integer in JavaScript.-(2^53 - 1)
+          +`Number.POSITIVE_INFINITY : ${1/0}\n`              //POSITIVE_INFINITY is returned on overflow:
+          +`Number.NEGATIVE_INFINITY : ${-1/0}\n` 
+          +`Number.NaN : ${Number.NaN}`                       //NaN is a JavaScript reserved word for a number that is not a legal number.
+          ;
+     alert(msg);
+}
+
 
 
      
