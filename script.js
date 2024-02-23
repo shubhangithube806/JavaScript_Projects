@@ -851,6 +851,99 @@ function f13_Date_Set_Methods() {
 }
 
 
+function f14_Maths() {
+
+     const msg = `Math Properties(Constants):\n`         //The syntax for any Math property is : Math.property.
+     +`Math.E : ${Math.E}\n`                             //returns Euler's number
+     +`Math.PI : ${Math.PI}\n`                             // returns PI
+     +`Math.SQRT2 : ${Math.SQRT2}\n`                       // returns the square root of 2
+     +`Math.SQRT1_2 : ${Math.SQRT1_2}\n`                   // returns the square root of 1/2                              
+     +`Math.LN2  : ${Math.LN2 }\n`                         // returns the natural logarithm of 2
+     +`Math.LN10 : ${Math.LN10 }\n`                        // returns the natural logarithm of 10
+     +`Math.LOG2E : ${Math.LOG2E}\n`                       // returns base 2 logarithm of E
+     +`Math.LOG10E : ${Math.LOG10E }\n`                    // returns base 10 logarithm of E
+     
+     +`Math Methods:\n`
+     +`Math.round() : ${Math.round(4.6)}\n`//Math.round(x) returns the nearest integer:
+     +`Math.ceil() : ${Math.ceil(4.4)}\n`  //Math.ceil(x) returns the value of x rounded up to its nearest integer:
+     +`Math.floor() : ${Math.floor(4.4)}\n`//Math.floor(x) returns the value of x rounded down to its nearest integer:
+     +`Math.trunc() : ${Math.trunc(4.7)}\n`//Math.trunc(x) returns the integer part of x:
+     +`Math.sign() : ${Math.sign(-4)}\n`  //Math.sign(x) returns if x is negative, null or positive:
+     +`Math.pow() : ${Math.pow(4, 2)}\n`    //Math.pow(x, y) returns the value of x to the power of y:
+     +`Math.sqrt() : ${Math.sqrt(64)}\n`    //Math.sqrt(x) returns the square root of x:
+     +`Math.abs() : ${Math.abs(-4.7)}\n`    //Math.abs(x) returns the absolute (positive) value of x
+     +`Math.sin() : ${Math.sin(90 * Math.PI / 180)}\n`// returns 1 (the sine of 90 degrees)
+     +`Math.cos() : ${Math.cos(0 * Math.PI / 180)}\n` // returns 1 (the cos of 0 degrees)
+     +`Math.min(0, 150, 30, 20, -8, -200) : ${Math.min(0, 150, 30, 20, -8, -200)}\n`
+     +`Math.max(0, 150, 30, 20, -8, -200) : ${Math.max(0, 150, 30, 20, -8, -200)}\n`
+     +`Math.random() : ${Math.random()}\n`  //Math.random() returns a random number between 0 (inclusive), and 1 (exclusive):
+     +`Math.log() : ${Math.log(2)}\n` //Math.log(x) returns the natural logarithm of x.
+     +`Math.log2() : ${Math.log2(8)}\n`
+     +`Math.log10() : ${Math.log10(1000)}\n`
+     ;
+     alert(msg);
+}
+
+
+function f15_If_Else() {
+     //Conditional Statements
+     //Use if to specify a block of code to be executed, if a specified condition is true
+     //Use else to specify a block of code to be executed, if the same condition is false
+     //Use else if to specify a new condition to test, if the first condition is false
+   
+     const time = new Date().getHours();
+     let msg;
+
+     if (time < 10) {
+          msg = "Good Morning";
+     }
+     else if (time < 20) {
+          msg = "Good Afternoon";
+     } 
+     else {
+          msg = "Good Evening";
+     }  
+   alert(msg);
+}
+
+
+function f16_Switch() {
+    //Use the switch statement to select one of many code blocks to be executed.
+    //The switch expression is evaluated once.
+    //The value of the expression is compared with the values of each case.
+    //If there is a match, the associated block of code is executed.
+    //If there is no match, the default code block is executed.
+
+    let day;
+    switch (new Date().getDay()) {
+          case 0:
+               day = "Sunday";
+               break;
+          case 1:
+               day = "Monday";
+               break;
+          case 2:
+               day = "Tuesday";
+               break;
+          case 3:
+               day = "Wednesday";
+               break;
+          case 4:
+               day = "Thursday";
+               break;
+          case 5:
+               day = "Friday";
+               break;
+          case 6: 
+               day = "Saturday";
+               break;
+          default:
+               day = "Looking forward to the Weekend";
+    }
+    day = "Today is " + day;
+
+    alert(day);
+}
 
 
      
