@@ -679,7 +679,75 @@ function f11_Number_Properties() {
 }
 
 
+function f12_Array() {
+     //An array is a special variable, which can hold more than one value:
+     //It is a common practice to declare arrays with the const keyword.
+     //const cars = ["Saab", "Volvo", "BMW"];
+     //You can also create an array, and then provide the elements:
+     /*const cars = [];
+        cars[0]= "Saab";
+        cars[1]= "Volvo";
+        cars[2]= "BMW";  */
+     //The following example also creates an Array, and assigns values to it:
+     //const cars = new Array("Saab", "Volvo", "BMW");
 
-     
+     const cars = ["Saab" , "Volvo" , "BMW"];
+
+     let msg = `Accessing Array Element : ${cars[0]}\n`
+               +`Changing an Array Element : ${cars[1] = "Ertica"}\n`
+               +`Converting an Array to a String : ${cars.toString()}`
+               +`Access the Full Array ; ${cars}`
+               +`The length Property : ${cars.length}\n` // Returns the number of elements
+               +`Accessing the First Array Element : ${cars[0]}\n`
+               +`Accessing the Last Array Element : ${cars[cars.length - 1]}\n`
+               +`Adding Array Elements : ${cars[cars.push("Ertica")]}\n`
+               +`typeof Array : ${typeof cars}`
+          ;
+     alert(msg);
+
+}
+
+
+function f12_Array_Method_1() {
+     const fruits = ["Banana", "Oranges", "Apple", "Mango"];
+
+     const flowers = ["Rose", "Lili", "Hibiscus"];
+
+     const myArr = [[1,2], [3,4], [5,6]];
+
+     let msg = `Array length : ${fruits.length}\n`
+          +`Array toString() : ${fruits.toString()}\n`
+          +`Array at() : ${fruits.at(2)} , Using [ ] : ${fruits[2]}\n` //The at() method returns an indexed element from an array.
+          +`Array join() : ${fruits.join(" * ")}\n`  //The join() method also joins all array elements into a string.It behaves just like toString(), but in addition you can specify the separator:
+          +`Array pop() : ${fruits.pop()} \t ${fruits}\n`  //The pop() method removes the last element from an array:
+          +`Array push() : ${fruits.push("Kiwi")} \t ${fruits}\n`  //The push() method adds a new element to an array (at the end):
+          +`Array shift() : ${fruits.shift()}\t ${fruits}\n`  //The shift() method removes the first array element and "shifts" all other elements to a lower index.
+          +`Array unshift() : ${fruits.unshift("Lemmon")}\t ${fruits}\n` //The unshift() method adds a new element to an array (at the beginning), and "unshifts" older elements:
+          +`Array concat() : ${fruits.concat(flowers)}\n`  //The concat() method creates a new array by merging (concatenating) existing arrays:
+          +`Array copyWithin() : ${fruits.copyWithin(2, 0)}\t ${fruits.copyWithin(2, 0, 2)}\n`  //The copyWithin() method copies array elements to another position in an array:
+          +`Array flat() : ${myArr.flat()}\n`//The flat() method creates a new array with sub-array elements concatenated to a specified depth.
+          +`Array splice() : ${fruits.splice(2, 0, "Pineapple", "Graps")}\t ${fruits}\n` //The splice() method can be used to add new items to an array:
+          +`Array slice() : ${fruits.slice(2)}\n`  //The slice() method slices out a piece of an array into a new array:
+     ;
+     alert(msg);
+}
+
+
+function f12_Array_Method_2() {
+     const fruits = ["Apple", "Orange", "Apple", "Mango"];
+
+     let msg = `Array Search Methods : \n`
+          +`Array indexOf() : ${fruits.indexOf("Apple") + 1}\n`  //The indexOf() method searches an array for an element value and returns its position.
+          +`Array lastIndexOf() : ${fruits.lastIndexOf("Apple") + 1}\n`  //Array.lastIndexOf() is the same as Array.indexOf(), but returns the position of the last occurrence of the specified element.
+          +`Array includes() : ${fruits.includes("Orange")}\n`
+          +`Array Sorting Mthods : \n`
+          +`Array sort() : ${fruits.sort()}\n`  //The sort() method sorts an array alphabetically:
+          +`Array reverse() : ${fruits.reverse()}\n` //The reverse() method reverses the elements in an array:
+          +`Array toSorted() : ${fruits.toSorted()}\n` //the toSorted() method as a safe way to sort an array without altering the original array.
+          +`Array toReversed() : ${fruits.toReversed()}\n`  //It creates a new array, keeping the original array unchanged
+     ;
+     alert(msg);
+}
+
 
 
